@@ -67,6 +67,7 @@
 }
 
 body {
+    overflow: hidden;
     margin-top: 1.25rem;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
