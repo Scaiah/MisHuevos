@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MisHuevos - Sobre</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <ul class="cabecalho_menu_lista">
+                <li class="cabecalho_menu_item"><a class="cabecalho_menu_link" href="index.html">Home</a></li>
+                <li class="cabecalho_menu_item"><a class="cabecalho_menu_link" href="about.html">Sobre</a></li>
+                <li class="cabecalho_menu_item"><a class="cabecalho_menu_link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="formulario">
+        <section>
+            <h1 class="formulario_titulo">Contact <strong class="huevos">My eggs</strong></h1>
+            <form class="formulario_form" action="https://formspree.io/f/xjvjlzqk" method="POST">
+                <label for="nome" class="formulario_label">Nome:</label>
+                <input type="text" id="nome" name="nome" class="formulario_input" required>
+
+                <label for="email" class="formulario_label">Email:</label>
+                <input type="email" id="email" name="_replyto" class="formulario_input" required>
+                <label for="mensagem" class="formulario_label">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" class="formulario_textarea" required></textarea>
+                <button type="submit" class="formulario_botao">Enviar</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape_texto">Desenvolvido por Pedro Lima</p>
+    </footer>
+</body>
+</html>
