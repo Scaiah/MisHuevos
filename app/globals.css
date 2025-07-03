@@ -1,26 +1,92 @@
-@import "tailwindcss";
+  @import "tailwindcss";
+  @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  .cabecalho {@apply fixed top-0 z-[1000] bg-gradient-to-b from-background to-transparent p-4 text-center max-w-[1440px] w-full mx-auto;}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .cabecalho_menu {@apply flex items-center justify-center gap-4 mt-2;}
+
+  .cabecalho_menu_lista {@apply flex justify-center items-center gap-4 list-none p-0 m-0 select-none;}
+
+  .cabecalho_menu_lista li {@apply font-montserrat font-semibold;}
+
+  .cabecalho_menu_link {@apply text-button transition-all duration-600 hover:text-buttonhover;}
+
+  body {@apply mt-5 bg-background text-defaulttext box-border text-base max-w-[1440px] w-full mx-auto;}
+
+  .huevos {@apply text-huevos transition-colors duration-600 hover:text-huevoshover;}
+
+  .apresentacao {@apply flex items-center justify-center pt-24 pb-24 min-h-screen box-border;}
+
+  .apresentacao_titulo {@apply font-kronaone text-2xl font-bold text-enphasis;}
+
+  .apresentacao_texto {@apply flex items-center justify-center flex-col p-8 w-full font-montserrat;}
+
+  .apresentacao_links {@apply flex justify-center items-center gap-4 p-4 select-none;}
+
+  .apresentacao_links_titulo{@apply flex font-montserrat text-lg font-bold text-enphasis mb-2;}
+
+  .apresentacao_links_link {@apply font-montserrat font-semibold text-background bg-enphasis hover:bg-buttonhover px-4 py-2 rounded transition-colors duration-300 shadow-lg box-border w-40 h-10 flex items-center justify-center;}
+
+  .apresentacao_links_icones {@apply flex items-center justify-center mx-2;}
+
+  .apresentacao_imagens {@apply relative flex justify-center items-center flex-wrap border-2 border-buttonhover rounded-lg w-76 h-51 mt-14 mb-14 select-none shadow-lg;}
+
+  .apresentacao_imagens_img1 {@apply absolute top-2 right-2 rounded-lg;}
+
+  .formulario {@apply flex flex-col items-center justify-center;}
+
+  .formulario input, .formulario textarea {@apply w-full max-w-md p-2 mb-4 border border-buttonhover rounded font-montserrat bg-background text-defaulttext box-border transition-colors duration-600 focus:outline-none focus:border-button;}
+
+  .formulario_titulo {@apply text-center font-kronaone text-2xl text-enphasis mb-4;}
+
+  .formulario_form {@apply flex flex-col items-center justify-center;}
+
+  .formulario_label {@apply font-montserrat font-semibold text-defaulttext mb-2;}
+
+  .formulario_botao {@apply bg-enphasis text-defaulttext py-2 px-15 rounded cursor-pointer font-montserrat font-semibold transition-colors duration-600 hover:bg-buttonhover hover:text-background;}
+
+  .login {@apply flex items-center justify-center flex-col mt-20 mb-20 p-8;}
+
+  .login_section {@apply flex flex-col items-center justify-center w-full max-w-md p-8 bg-background border border-buttonhover rounded-lg shadow-lg;}
+
+  .login_titulo {@apply text-center font-kronaone text-2xl text-enphasis mb-4;}
+
+  .login_form {@apply flex flex-col items-center justify-center w-full;}
+
+  .login_input {@apply w-full p-2 mb-4 border border-buttonhover rounded font-montserrat bg-background text-defaulttext box-border transition-colors duration-600 focus:outline-none focus:border-button;}
+
+  .login_label {@apply font-montserrat font-semibold text-defaulttext mb-2;}
+
+  .login_botao {@apply bg-enphasis text-defaulttext py-2 px-15 rounded cursor-pointer font-montserrat font-semibold transition-colors duration-600 hover:bg-buttonhover hover:text-background;}
+
+  .rodape {@apply fixed bottom-0 left-0 w-full z-[1000] bg-gradient-to-t from-background to-transparent p-4 text-center font-montserrat text-defaulttext;}
+
+  @theme inline {
+  --color-huevoshover: #e20799;
+  --color-huevos: #476A6F;
+  --color-footer: #27393B;
+  --color-link: #1E90FF;
+  --color-enphasis: #59A96A;
+  --color-defaulttext: #BCD4DE;
+  --color-buttonhover: #B4DC7F;
+  --color-button: #8BBFA4;
+  --color-background: #070707;
+  --font-montserrat: var(--font-montserrat);
+  --font-kronaone: var(--font-kronaone);
+  --font-size: 16px;
+  --font-size-mobile: 14px;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  @media (max-width: 600px) {
+  .apresentacao_links {@apply flex-col gap-4;}
+
+  .apresentacao_links_link {@apply w-full max-w-xs;}
+
+  .apresentacao_links_icones {@apply m-0;}
+
+  .apresentacao_imagens {@apply w-7/10 max-h-29 max-w-54;}
+
+  .apresentacao_imagens_img1 {@apply max-w-full max-h-[7.3rem];}
+
+  }
